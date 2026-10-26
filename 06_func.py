@@ -28,7 +28,9 @@ def make_counter():
         return c
     return bump
 cnt = make_counter()
-print(cnt(), cnt(), cnt()) # 1 2 3
+print(cnt()) # 1
+print(cnt()) # 2
+print(cnt()) # 3
 print("-------------------------------")
 
 print(sorted([(2, "b"), (1, "a")], key=lambda p: p[0])) # [(1, 'a'), (2, 'b')] 使用lambda函数作为排序的key

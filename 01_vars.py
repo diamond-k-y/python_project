@@ -12,7 +12,8 @@ print(type(ok)) # <class 'bool'>
 a, b = 10, 20 # 多变量赋值
 a, b = b, a # 交换变量值
 x = y = z = 100 # 链式赋值
-print(a, b, x, y, z) # 20 10 100 100 100
+print(a, b) # 20 10 交换后的结果
+print(x, y, z) # 100 100 100 链式赋值
 
 print(7 / 2) # 3.5 浮点数除法
 print(7 // 2) # 3 整数除法

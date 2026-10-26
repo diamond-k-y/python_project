@@ -37,15 +37,21 @@ class Dog(Animal):  # 继承自Animal类
         return super().speak() + "!"  # 重写父类的方法
 
 a = Animal.from_string("猫:喵")  # 使用类方法创建对象
-print(a, repr(a), a.speak(), a.shout)  # 打印对象信息和方法调用
+print(a)  # Animal(name='猫')
+print(repr(a))  # Animal(name='猫')
+print(a.speak())  # 猫 说 喵
+print(a.shout)  # 喵
 
 d = Dog("旺财")  # 创建Dog对象
-print(d.speak(), isinstance(d, Animal), Animal.kingdom)  # 打印Dog对象的方法调用和属性
-print(Animal("猫") == a, Animal.is_loud("WOOF"))
+print(d.speak())  # 旺财 说 汪!
+print(isinstance(d, Animal))  # True
+print(Animal.kingdom)  # 动物界
+print(Animal("猫") == a)  # True 自定义 __eq__ 只比较 name
+print(Animal.is_loud("WOOF"))  # True
 
 @dataclass
 class Point:
     x: int = 0
     y: int = 0
     tags: list[str] = field(default_factory=list)
-print(Point(1, 2) ==Point(1, 2))
+print(Point(1, 2) == Point(1, 2))  # True dataclass 自动生成 __eq__

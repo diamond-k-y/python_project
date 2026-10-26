@@ -7,10 +7,12 @@ def countdown(n):
 print(list(countdown(3)))
 
 it = iter([10, 20])
-print(next(it), next(it))
+print(next(it))  # 10
+print(next(it))  # 20
 
 gen = (x * 2 for x in range(5))
-print(next(gen), sum(gen))           # 注意：已被消费一个元素
+print(next(gen))  # 0
+print(sum(gen))   # 20 注意：0 已被消费，剩下 2+4+6+8
 
 def fib():
     a, b = 0, 1
