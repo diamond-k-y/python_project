@@ -4,8 +4,8 @@ person["city"] = "china" # 添加键值对
 print(f"name对应的值: {person['name']}") # capybara 获取键对应的值
 print(f"job对应的值: {person.get('job')}") # None 获取键对应的值，如果键不存在则返回None
 print(f"job对应的值: {person.get('job', '未知')}") # 未知 获取键对应的值，如果键不存在则返回默认值
-for v, k in person.items(): # 遍历字典的键值对
-    print(f"{v}: {k}")
+for k, v in person.items(): # 遍历字典的键值对
+    print(f"{k}: {v}")
 print("------------------------------")
 
 print(f"字典的长度: {len(person)}") # 获取字典的长度

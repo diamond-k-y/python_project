@@ -6,7 +6,8 @@ def bad(item, box=[]):
 print(bad(1), bad(2))            # 会累加！
 
 def good(item, box=None):
-    box = box or []
+    if box is None:          # 不能用 box = box or []，空列表会被当成没传而换掉
+        box = []
     box.append(item)
     return box
 

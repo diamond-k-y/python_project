@@ -31,7 +31,7 @@ class Animal:
 
 class Dog(Animal):  # 继承自Animal类
     def __init__(self, name, sound="汪"):
-        super().__init__(name, "汪")  # 调用父类的构造方法
+        super().__init__(name, sound)  # 调用父类的构造方法
 
     def speak(self):
         return super().speak() + "!"  # 重写父类的方法

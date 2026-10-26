@@ -21,7 +21,6 @@ def check_age(age):
     return age
 try:
     print(check_age(-1))
-    check_age(-1)
 except AgeError as e:
     print(f"捕获到自定义异常：{e}")
 try:
